@@ -175,3 +175,12 @@ Then("I should see the event's info", () => {
       cy.get('div.embed').should('have.length', 1)
     })
 })
+
+Then('I should be able to log in via oauth github', () => {
+  cy.get('a')
+    .contains('Login')
+    .click()
+    .get('button')
+    .contains('with GitHub')
+    .click()
+})
